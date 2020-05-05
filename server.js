@@ -20,10 +20,14 @@ mongoose
   .catch((err) => console.log(err));
 
 const candidateZoneRouter = require("./routes/candidateZone");
-//const usersRouter = require("./routes/users");
+const contactUsRouter = require("./routes/contactUs");
+const employerZoneRouter = require("./routes/employerZone");
+const partnerZoneRouter = require("./routes/partnerZone");
 
 app.use("/candidateZone", candidateZoneRouter);
-//app.use("/users", usersRouter);
+app.use("/contactUS", contactUsRouter);
+app.use("/employerZone", employerZoneRouter);
+app.use("/partnerZone", partnerZoneRouter);
 
 app.listen(port, () => {
   console.log(`Server is running on port: ${port}`);
